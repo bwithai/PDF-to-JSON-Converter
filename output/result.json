@@ -1,0 +1,40 @@
+{
+    "Items": [
+        {
+            "item_no": "0001",
+            "supplies_or_services": "Phase-In Operations FFP Provide all transition services and materials to execute a 90 day phase-in period IAW the ARCENT-PWS sections, including, but not limited to: 2.5 and 3.1. Phase-In Operations include all materials, transportation, supplies, import - export licensing, equipment and labor required to conduct phase-in operations. Pricing shall be inclusive of required DBA insurance and any applicable DSSR uplift.",
+            "quantity": "3",
+            "unit": "Months",
+            "unit_price": "$132,733.66",
+            "amount": "$398,200.98",
+            "clauses": [
+                {
+                    "clause_no": "000101",
+                    "clause_title": "Funding for CLIN 0001 FFP Phase In Operations",
+                    "purchase_request_number": "0011474303",
+                    "net_amt": "$0.00",
+                    "acrn": "AA",
+                    "cin": "GFEBS001147430300002"
+                }
+            ]
+        },
+        {
+            "item_no": "0002",
+            "supplies_or_services": "Program Management FFP Provide Program Management support IAW ARCENT-PWS. Manage all requirements listed in the PWS as well as support the execution of all services contained in PWS section 3. This includes, but not limited to, logistics, transportation, property management, schedule management and staff not directly providing training support. Pricing shall be inclusive of required DBA insurance and any applicable DSSR uplift.",
+            "quantity": "9",
+            "unit": "Months",
+            "unit_price": "$260,043.55",
+            "amount": "$2,340,391.95",
+            "clauses": [
+                {
+                    "clause_no": "000201",
+                    "clause_title": "Funding for CLIN 0002 FFP Program Management",
+                    "purchase_request_number": "0011474303",
+                    "net_amt": "$0.00",
+                    "acrn": "AA",
+                    "cin": "GFEBS001147430300004"
+                }
+            ]
+        }
+    ]
+}

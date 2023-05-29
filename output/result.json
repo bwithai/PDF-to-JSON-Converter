@@ -35,6 +35,24 @@
                     "cin": "GFEBS001147430300004"
                 }
             ]
+        },
+        {
+            "item_no": "0003",
+            "supplies_or_services": "Instructor / Operator (I/O) Services FFP Provide all Instructor and Operator services required to execute the requirement IAW ARCENT-PWS paragraph 3.2.",
+            "quantity": "9",
+            "unit": "Months",
+            "unit_price": "$324,765.22",
+            "amount": "$2,922,886.98",
+            "clauses": [
+                {
+                    "clause_no": "000301",
+                    "clause_title": "Funding for CLIN 0003 FFP Instructor/Operator (I/O) Services",
+                    "purchase_request_number": "0011474303",
+                    "net_amt": "$0.00",
+                    "acrn": "AA",
+                    "cin": "GFEBS001147430300006"
+                }
+            ]
         }
     ]
 }

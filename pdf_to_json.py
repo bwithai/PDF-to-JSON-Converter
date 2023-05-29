@@ -10,23 +10,15 @@ from prompt import prompt_items, prompt_clauses
 
 
 class PdfParser:
-    def __init__(self, openai_api_key, context):
-        if context == "items":
-            self.prompt_questions = prompt_items
-        elif context == "clauses":
-            self.prompt_questions = prompt_clauses
-        else:
-            print("please specify the context in the form of 'items' or 'img' or 'clauses'")
+    def __init__(self, openai_api_key):
+        self.prompt_questions = prompt_items
         openai.api_key = openai_api_key
         self.logger = logging.getLogger(__name__)
 
-    def convert_pdf_to_string(self, pdf_path, start_page, end_page, context):
+    def convert_pdf_to_string(self, pdf_path, start_page, end_page):
         with open(pdf_path, "rb") as f:
             pdf = pdftotext.PDF(f)
-            if context == "clauses":
-                page_text = pdf[start_page - 1]
-            elif context == "items":
-                page_text = [pdf[page_num - 1] for page_num in range(start_page, end_page + 1)]
+            page_text = [pdf[page_num - 1] for page_num in range(start_page, end_page + 1)]
 
         pdf_str = "\n\n".join(page_text)
         pdf_str = re.sub('\s[,.]', ',', pdf_str)
@@ -104,4 +96,4 @@ class PdfParser:
         with open(json_output_path, 'w') as json_file:
             json_file.write(json_data)
 
-        return "Extraction successful"
+        return "Img convert to json successfully"

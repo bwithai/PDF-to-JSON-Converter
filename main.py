@@ -2,7 +2,7 @@ import argparse
 import os
 from dotenv import load_dotenv
 
-from pdf_to_json import PdfParser
+from pdf_to_json import convert_pdf_to_string, extract_text_from_image_pdf, PdfParser
 
 load_dotenv()
 
@@ -23,8 +23,7 @@ if not os.path.exists(args.pdf_path):
     exit(1)
 
 # Initialize the PdfParser instance with API key and PDF context
-api_key = os.getenv("OPENAI_API_KEY")
-parser = PdfParser(api_key)
+parser = PdfParser()
 
 # Process PDF based on the specified context
 if args.pdf_context == "items":
@@ -37,7 +36,7 @@ if args.pdf_context == "items":
         exit(1)
 
     # Convert PDF pages to string
-    pdf_str = parser.convert_pdf_to_string(args.pdf_path, args.start_page, args.end_page)
+    pdf_str = convert_pdf_to_string(args.pdf_path, args.start_page, args.end_page)
 
     # Query the PDF content
     query = parser.query_pdf(pdf_str)
@@ -45,5 +44,5 @@ if args.pdf_context == "items":
 
 elif args.pdf_context == "img":
     page_number = 1  # Process only page 1 and 2 since it's an image-based PDF
-    query = parser.extract_text_from_ImgPdf(args.pdf_path, page_number)
+    query = extract_text_from_image_pdf(args.pdf_path, page_number)
     print(query)

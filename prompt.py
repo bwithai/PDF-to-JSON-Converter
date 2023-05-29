@@ -1,4 +1,4 @@
-prompt_clauses = '''{
+PROMPT_CLAUSES = '''{
     "clauses": [
         {
             "clause_no": "",
@@ -15,7 +15,7 @@ prompt_clauses = '''{
 }'''
 
 
-prompt_items = """
+PROMPT_ITEMS = """
             Summarize the text below into a JSON with exactly the following structure:
             {
                 "Items": [

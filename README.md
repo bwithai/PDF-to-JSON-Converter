@@ -15,6 +15,7 @@ This is a Python script that converts PDF files into JSON format. It provides op
 2. Install the required dependencies by running the following command:
 
    ```bash
+   sudo apt-get install libpoppler-cpp-dev
    pip install -r requirements.txt
 3. If you're planning to extract text from image-based PDFs, make sure Tesseract OCR is installed on your system. You can find installation instructions for your operating system in the Tesseract OCR documentation.
 4. Set up your OpenAI API key by creating a .env file in the project directory and adding the following line:

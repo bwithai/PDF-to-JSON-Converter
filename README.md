@@ -15,7 +15,7 @@ This is a Python script that converts PDF files into JSON format. It provides op
 2. Install the required dependencies by running the following command:
 
    ```bash
-   pip install -r requirements.txt
+   pip install -r build/requirements.txt
 3. If you're planning to extract text from image-based PDFs, make sure Tesseract OCR is installed on your system. You can find installation instructions for your operating system in the Tesseract OCR documentation.
 4. Set up your OpenAI API key by creating a .env file in the project directory and adding the following line:
    `OPENAI_API_KEY=your_api_key_here` Replace your_api_key_here with your actual OpenAI API key.
